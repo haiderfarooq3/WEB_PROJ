@@ -11,6 +11,7 @@ namespace DBPROJ_V2.Controllers
 {
     public class HomeController : Controller
     {
+        Database db = new Database();
 
         public HomeController(ILogger<HomeController> logger)
         {
@@ -25,13 +26,36 @@ namespace DBPROJ_V2.Controllers
         {
             return View();
         }
-
-        public IActionResult LoginForm(string userType)
+        [HttpPost]
+        public void LoginForm([Bind]Cred credentials, string userType)
         {
             var uType = string.IsNullOrEmpty(userType) ? "" : userType.ToLower();
-            return View();
+            switch(uType)
+            {
+                case "admin":
+                    Console.WriteLine("Admin");
+                    break;
+                case "mem":
+                    Console.WriteLine("Member");
+                    break;
+                case "trn":
+                    Console.WriteLine("Trainer");
+                    break;
+                case "own":
+                    Console.WriteLine("Owner");
+                    break;
+            }
+            bool flag = db.validateLogin(credentials, uType);
+            if (flag)
+            {
+                TempData["msg"] = "Login Successful!";
+            }
+            else
+            {
+                TempData["msg"] = "Login Failed!";
+            }
         }
-
+        [HttpGet]
         public IActionResult Login()
         {
             return View();

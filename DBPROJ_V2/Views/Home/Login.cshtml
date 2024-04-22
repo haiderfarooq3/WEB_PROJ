@@ -1,11 +1,43 @@
-﻿@{
+﻿@model DBPROJ_V2.Models.Cred
+
+@{
     ViewData["Title"] = "Login";
 }
-<body class="Login">
-    <div class="Login containerL" style="margin-top : 5%">
-        <a class = "button" id="mem"asp-area="" asp-controller="Home" asp-action="loginForm" asp-route-userType="mem"> Member </a>
-        <a class = "button" id="trn" asp-area="" asp-controller="Home" asp-action="loginForm" asp-route-userType="trn"> Trainer </a>
-        <a class = "button" id="own" asp-area="" asp-controller="Home" asp-action="loginForm" asp-route-userType="own"> Owner </a>
-        <a class = "button" id="adm" asp-area="" asp-controller="Home" asp-action="loginForm" asp-route-userType="admin"> Administrator </a>
+<script src="~/scripts/script.js"></script>
+
+@{
+    ViewData["Title"] = "Login Form";
+}
+
+<form asp-area="" asp-action="LoginForm" id="loginForm">
+    <div class="LogInput">
+        <div class="UName">
+            <label>Username:</label>
+            <input asp-for=username type="text" id="username" name="username" />
+        </div>
+        <div class="Pass">
+            <label for="password">Password:</label>
+            <input asp-for=password type="password" />
+        </div>
     </div>
-</body>
+    <div class="Login">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <div class="Login containerL" style="margin-top: 5%">
+            <button class="buttonL" id="mem" asp-for=userType value="mem">Member</button>
+            <button class="buttonL" id="trn" asp-for=userType value="trn">Trainer</button>
+            <button class="buttonL" id="own" asp-for=userType value="own">Owner</button>
+            <button class="buttonL" id="adm" asp-for=userType value="admin">Administrator</button>
+            <input type="hidden" id="hiddenUserType" name="userType" />
+        </div>
+    </div>
+
+</form>
+
+@{
+    if (ViewBag.Error != null)
+    {
+        <div>
+            <p>@ViewBag.Error</p>
+        </div>
+    }
+}

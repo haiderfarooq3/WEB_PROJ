@@ -150,7 +150,7 @@ a:hover + .icon {
     align-items: center;
     overflow: hidden;
 }
-.containerL .button {
+.containerL .buttonL {
     display: block;
     margin: 50px;
     width: 400px;
@@ -165,28 +165,36 @@ a:hover + .icon {
     transition: all .35s;
     border-radius: 10px;
     border: 25px solid;
+    color: #fff;
+    background: #3e3e3e;
 }
-#mem {
+#mem:window-inactive {
     color: #2ecc71;
     border-color:#2ecc71;
 }
-#adm {
+#adm:window-inactive {
     color: #d62525;
     border-color: #d62525;
 }
-#own {
+#own:window-inactive {
     color: #58009f;
     border-color: #58009f;
 }
-#trn {
+#trn:window-inactive {
     color: #0072c7;
     border-color: #0072c7;
 }
-.containerL a:hover
+.containerL .buttonL:hover
 {
+    border: 3px solid ;
+    line-height: 325px;
+}
+.containerL .buttonL:active, .buttonL:focus {
     width: 500px;
     height: 350px;
-    border: 3px solid ;
+    border: 3px solid;
+    border-color: #f8ff00;
+    background: #eeee74;
     line-height: 325px;
 }
 .containerL #own:hover {
@@ -208,4 +216,11 @@ a:hover + .icon {
     color: #fff;
     border-color: #0072c7;
     background-color: #0072c7;
+}
+
+.LogInput{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    overflow: hidden;
 }
