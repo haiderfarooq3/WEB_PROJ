@@ -1,0 +1,211 @@
+﻿/* Please see documentation at https://learn.microsoft.com/aspnet/core/client-side/bundling-and-minification
+for details on configuring this project to bundle and minify static web assets. */
+
+a.navbar-brand {
+  white-space: normal;
+  text-align: center;
+  word-break: break-all;
+}
+
+p.navbar-brand {
+    color: #0077cc;
+    white-space: normal;
+    text-align: center;
+    word-break: break-all;
+}
+
+a {
+  color: #0077cc;
+  transition: all .35s;
+}
+
+#logo{
+    width: 50px;
+    height: 50px;
+    
+}
+.btn-primary {
+  color: #fff;
+  background-color: #1b6ec2;
+  border-color: #1861ac;
+}
+
+.nav-pills .nav-link.active, .nav-pills .show > .nav-link {
+  color: #fff;
+  background-color: #1b6ec2;
+  border-color: #1861ac;
+}
+
+html {
+  font-size: 14px;
+}
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+.border-top {
+  border-top: 1px solid #e5e5e5;
+}
+.border-bottom {
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.box-shadow {
+  box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
+}
+
+button.accept-policy {
+  font-size: 1rem;
+  line-height: inherit;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 60px;
+}
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  white-space: nowrap;
+  line-height: 60px;
+}
+
+#grp{
+    text-align: center;
+}
+
+.container2{
+    margin-top: 10%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    overflow: hidden;
+}
+
+.container2 figcaption {
+    color: #3e3e3e;
+    font-size: 24px;
+    margin-top: 5%;
+    text-align: center;
+}
+
+.container2 img {
+    width: 250px;
+    height: 250px;
+    align-content: center;
+    border-radius: 50%;
+    border: 5px solid;
+    border-color: #91ebf9;
+    object-fit: cover;
+}
+
+.button {
+    display: block;
+    width: 200px;
+    height: 50px;
+    line-height: 50px;
+    font-weight: bold;
+    text-decoration: none;
+    background: transparent;
+    text-align: center;
+    color: #2ecc71;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border: 3px solid #2ecc71;
+    transition: all .35s;
+}
+.containerI a:hover {
+    width: 250px;
+    background: #1eec0f;
+    color: #fff;
+    border: 3px solid #1eec0f;
+}
+
+.conatinerI a:hover + .icon {
+    border: 3px solid #2ecc71;
+    right: -25%;
+}
+a:hover {
+    width: 150px;
+    background: #a2a2a2;
+    color: #2ecc71;
+    text-align: center;
+}
+a:hover + .icon {
+    border: 3px solid #3a3a3a;
+    right: -25%;
+}
+
+.containerL
+{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    overflow: hidden;
+}
+.containerL .button {
+    display: block;
+    margin: 50px;
+    width: 400px;
+    height: 300px;
+    line-height: 275px;
+    font-weight: bold;
+    text-decoration: none;
+    text-align: center;
+    background: transparent;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all .35s;
+    border-radius: 10px;
+    border: 25px solid;
+}
+#mem {
+    color: #2ecc71;
+    border-color:#2ecc71;
+}
+#adm {
+    color: #d62525;
+    border-color: #d62525;
+}
+#own {
+    color: #58009f;
+    border-color: #58009f;
+}
+#trn {
+    color: #0072c7;
+    border-color: #0072c7;
+}
+.containerL a:hover
+{
+    width: 500px;
+    height: 350px;
+    border: 3px solid ;
+    line-height: 325px;
+}
+.containerL #own:hover {
+    color: #fff;
+    border-color: #58009f;
+    background: #58009f;
+}
+.containerL #adm:hover {
+    color: #fff;
+    border-color: #d62525;
+    background: #d62525;
+}
+.containerL #mem:hover {
+    color: #fff;
+    border-color: #2ecc71;
+    background: #2ecc71;
+}
+.containerL #trn:hover {
+    color: #fff;
+    border-color: #0072c7;
+    background-color: #0072c7;
+}

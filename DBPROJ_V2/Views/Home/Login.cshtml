@@ -1,0 +1,11 @@
+﻿@{
+    ViewData["Title"] = "Login";
+}
+<body class="Login">
+    <div class="Login containerL" style="margin-top : 5%">
+        <a class = "button" id="mem"asp-area="" asp-controller="Home" asp-action="loginForm" asp-route-userType="mem"> Member </a>
+        <a class = "button" id="trn" asp-area="" asp-controller="Home" asp-action="loginForm" asp-route-userType="trn"> Trainer </a>
+        <a class = "button" id="own" asp-area="" asp-controller="Home" asp-action="loginForm" asp-route-userType="own"> Owner </a>
+        <a class = "button" id="adm" asp-area="" asp-controller="Home" asp-action="loginForm" asp-route-userType="admin"> Administrator </a>
+    </div>
+</body>
