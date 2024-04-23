@@ -159,43 +159,38 @@ a:hover + .icon {
     font-weight: bold;
     text-decoration: none;
     text-align: center;
-    background: transparent;
     text-transform: uppercase;
     letter-spacing: 1px;
     transition: all .35s;
     border-radius: 10px;
-    border: 25px solid;
     color: #fff;
-    background: #3e3e3e;
+    border: 25px solid #fff;
+    opacity: 30%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
-#mem:window-inactive {
-    color: #2ecc71;
-    border-color:#2ecc71;
+#mem {
+    background-color: #2ecc71;
+    border-color: #2ecc71;
 }
-#adm:window-inactive {
-    color: #d62525;
+#adm {
+    background-color: #d62525;
     border-color: #d62525;
 }
-#own:window-inactive {
-    color: #58009f;
+#own {
+    background-color: #58009f;
     border-color: #58009f;
 }
-#trn:window-inactive {
-    color: #0072c7;
+#trn {
+    background-color: #0072c7;
     border-color: #0072c7;
 }
 .containerL .buttonL:hover
 {
+    height:120%;
+    width:100%;
     border: 3px solid ;
     line-height: 325px;
-}
-.containerL .buttonL:active, .buttonL:focus {
-    width: 500px;
-    height: 350px;
-    border: 3px solid;
-    border-color: #f8ff00;
-    background: #eeee74;
-    line-height: 325px;
+    opacity: 100%;
 }
 .containerL #own:hover {
     color: #fff;
@@ -217,10 +212,64 @@ a:hover + .icon {
     border-color: #0072c7;
     background-color: #0072c7;
 }
-
-.LogInput{
+.LogInput {
     display: flex;
+    flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
     overflow: hidden;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0.5);
+}
+
+/* Style the input fields */
+.LogInput input[type=text],
+.LogInput input[type=password] {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+/* Style the submit button */
+.LogInput input[type=submit] {
+    width: 100%;
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+    /* Change submit button color on hover */
+    .LogInput input[type=submit]:hover {
+        background-color: #45a049;
+    }
+
+/* Add a hover effect to input fields */
+.LogInput input[type=text]:hover,
+.LogInput input[type=password]:hover {
+    border-color: #666;
+}
+
+/* Add padding to the container */
+.UName,
+.Pass {
+    padding: 16px;
+}
+
+/* Clear floats */
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
 }
