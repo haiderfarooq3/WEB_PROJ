@@ -27,7 +27,7 @@ namespace DBPROJ_V2.Controllers
             return View();
         }
         [HttpPost]
-        public void LoginForm([Bind]Cred credentials, string userType)
+        public IActionResult LoginForm([Bind]Cred credentials, string userType)
         {
             var uType = string.IsNullOrEmpty(userType) ? "" : userType.ToLower();
             switch(uType)
@@ -49,10 +49,13 @@ namespace DBPROJ_V2.Controllers
             if (flag)
             {
                 TempData["msg"] = "Login Successful!";
+                Console.WriteLine("test");
+                return RedirectToAction("Index");
             }
             else
             {
                 TempData["msg"] = "Login Failed!";
+                return RedirectToAction("Login");
             }
         }
         [HttpGet]
