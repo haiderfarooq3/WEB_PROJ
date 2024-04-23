@@ -150,52 +150,47 @@ a:hover + .icon {
     align-items: center;
     overflow: hidden;
 }
-.containerL .buttonL {
-    display: block;
-    margin: 50px;
-    width: 400px;
-    height: 300px;
-    line-height: 275px;
-    font-weight: bold;
-    text-decoration: none;
-    text-align: center;
-    background: transparent;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    transition: all .35s;
-    border-radius: 10px;
-    border: 25px solid;
-    color: #fff;
-    background: #3e3e3e;
+    .containerL .buttonL {
+        display: block;
+        margin: 50px;
+        width: 400px;
+        height: 300px;
+        line-height: 275px;
+        font-weight: bold;
+        text-decoration: none;
+        text-align: center;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        transition: all .35s;
+        border-radius: 10px;
+        color: #fff;
+        border: 25px solid #fff;
+        opacity: 30%;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    }
+#mem {
+    background-color: #2ecc71;
+    border-color: #2ecc71;
 }
-#mem:window-inactive {
-    color: #2ecc71;
-    border-color:#2ecc71;
-}
-#adm:window-inactive {
-    color: #d62525;
+#adm {
+    background-color: #d62525;
     border-color: #d62525;
 }
-#own:window-inactive {
-    color: #58009f;
+#own {
+    background-color: #58009f;
     border-color: #58009f;
 }
-#trn:window-inactive {
-    color: #0072c7;
+#trn {
+    background-color: #0072c7;
     border-color: #0072c7;
 }
 .containerL .buttonL:hover
 {
+    height:120%;
+    width:100%;
     border: 3px solid ;
     line-height: 325px;
-}
-.containerL .buttonL:active, .buttonL:focus {
-    width: 500px;
-    height: 350px;
-    border: 3px solid;
-    border-color: #f8ff00;
-    background: #eeee74;
-    line-height: 325px;
+    opacity: 100%;
 }
 .containerL #own:hover {
     color: #fff;
