@@ -15,4 +15,9 @@
     </PackageReference>
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Views\Member\" />
+    <Folder Include="Views\Trainer\" />
+  </ItemGroup>
+
 </Project>

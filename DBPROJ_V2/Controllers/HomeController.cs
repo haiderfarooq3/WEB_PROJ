@@ -50,7 +50,19 @@ namespace DBPROJ_V2.Controllers
             {
                 TempData["msg"] = "Login Successful!";
                 Console.WriteLine("test");
-                return RedirectToAction("Index");
+              switch  (uType)
+                {
+                    case "admin":
+                        return RedirectToAction("Index", "Admin", null);
+                    case "mem":
+                        return RedirectToAction("Member");
+                    case "trn":
+                        return RedirectToAction("Trainer");
+                    case "own":
+                        return RedirectToAction("Owner");
+                    default: 
+                        return RedirectToAction("About");
+                }
             }
             else
             {
