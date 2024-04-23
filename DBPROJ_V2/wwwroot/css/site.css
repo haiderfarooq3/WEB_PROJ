@@ -150,24 +150,24 @@ a:hover + .icon {
     align-items: center;
     overflow: hidden;
 }
-    .containerL .buttonL {
-        display: block;
-        margin: 50px;
-        width: 400px;
-        height: 300px;
-        line-height: 275px;
-        font-weight: bold;
-        text-decoration: none;
-        text-align: center;
-        text-transform: uppercase;
-        letter-spacing: 1px;
-        transition: all .35s;
-        border-radius: 10px;
-        color: #fff;
-        border: 25px solid #fff;
-        opacity: 30%;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-    }
+.containerL .buttonL {
+    display: block;
+    margin: 50px;
+    width: 400px;
+    height: 300px;
+    line-height: 275px;
+    font-weight: bold;
+    text-decoration: none;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all .35s;
+    border-radius: 10px;
+    color: #fff;
+    border: 25px solid #fff;
+    opacity: 30%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
 #mem {
     background-color: #2ecc71;
     border-color: #2ecc71;
@@ -212,10 +212,64 @@ a:hover + .icon {
     border-color: #0072c7;
     background-color: #0072c7;
 }
-
-.LogInput{
+.LogInput {
     display: flex;
+    flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
     overflow: hidden;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0.5);
+}
+
+/* Style the input fields */
+.LogInput input[type=text],
+.LogInput input[type=password] {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+/* Style the submit button */
+.LogInput input[type=submit] {
+    width: 100%;
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+    /* Change submit button color on hover */
+    .LogInput input[type=submit]:hover {
+        background-color: #45a049;
+    }
+
+/* Add a hover effect to input fields */
+.LogInput input[type=text]:hover,
+.LogInput input[type=password]:hover {
+    border-color: #666;
+}
+
+/* Add padding to the container */
+.UName,
+.Pass {
+    padding: 16px;
+}
+
+/* Clear floats */
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
 }

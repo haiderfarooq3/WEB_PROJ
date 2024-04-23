@@ -19,6 +19,8 @@ namespace DBPROJ_V2.Controllers
 
         public IActionResult Index()
         {
+            TempData["msg"] = "";
+
             return View();
         }
 
@@ -29,6 +31,11 @@ namespace DBPROJ_V2.Controllers
         [HttpPost]
         public IActionResult LoginForm([Bind]Cred credentials, string userType)
         {
+            if(credentials.password == null || credentials.username == null)
+            {
+                TempData["msg"] = "Please fill in all fields!";
+                return RedirectToAction("Login");
+            }
             var uType = string.IsNullOrEmpty(userType) ? "" : userType.ToLower();
             switch(uType)
             {

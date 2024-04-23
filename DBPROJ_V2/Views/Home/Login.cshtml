@@ -11,14 +11,18 @@
 
 <form asp-area="" asp-action="LoginForm" id="loginForm">
     <div class="LogInput">
-        <div class="UName">
-            <label>Username:</label>
-            <input asp-for=username type="text" id="username" name="username" />
+        <h1>LOGIN</h1>
+        <div>
+            <div class="UName">
+                <label>Username:</label>
+                <input asp-for=username type="text" id="username" name="username" required />
+            </div>
+            <div class="Pass">
+                <label for="password">Password:</label>
+                <input asp-for=password type="password" required/>
+            </div>
         </div>
-        <div class="Pass">
-            <label for="password">Password:</label>
-            <input asp-for=password type="password" />
-        </div>
+        <div id="msg" class="message" style="color:red">@TempData["msg"]</div>
     </div>
     <div class="Login">
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -40,4 +44,9 @@
             <p>@ViewBag.Error</p>
         </div>
     }
+}
+<script src="~/scripts/script.js"></script>
+
+@{
+    ViewData["Title"] = "Login Form";
 }
