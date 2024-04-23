@@ -8,16 +8,22 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Views\Member\**" />
+    <Compile Remove="Views\Trainer\**" />
+    <Content Remove="Views\Member\**" />
+    <Content Remove="Views\Trainer\**" />
+    <EmbeddedResource Remove="Views\Member\**" />
+    <EmbeddedResource Remove="Views\Trainer\**" />
+    <None Remove="Views\Member\**" />
+    <None Remove="Views\Trainer\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="8.0.0" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="8.0.0">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="Views\Member\" />
-    <Folder Include="Views\Trainer\" />
   </ItemGroup>
 
 </Project>

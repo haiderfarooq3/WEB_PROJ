@@ -55,21 +55,19 @@ namespace DBPROJ_V2.Controllers
             bool flag = db.validateLogin(credentials, uType);
             if (flag)
             {
-                TempData["msg"] = "Login Successful!";
-                Console.WriteLine("test");
-              switch  (uType)
-                {
-                    case "admin":
-                        return RedirectToAction("Index", "Admin", null);
-                    case "mem":
-                        return RedirectToAction("Member");
-                    case "trn":
-                        return RedirectToAction("Trainer");
-                    case "own":
-                        return RedirectToAction("Owner");
-                    default: 
-                        return RedirectToAction("About");
-                }
+                  switch  (uType)
+                    {
+                        case "admin":
+                            return RedirectToAction("Index", "Admin", null);
+                        case "mem":
+                            return RedirectToAction("Member");
+                        case "trn":
+                            return RedirectToAction("Trainer");
+                        case "own":
+                            return RedirectToAction("Owner");
+                        default: 
+                            return RedirectToAction("About");
+                    }
             }
             else
             {
